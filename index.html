@@ -1,0 +1,125 @@
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <!--for tap graphs snap.svg-->
+    <script src="Snap/dist/snap.svg-min.js"></script>
+    <!--MATERIALISE CSS: Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav-extended  light-blue lighten-3">
+        <div class="nav-wrapper">
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <div id="orderNotification">
+                    <li class="tablink tab" onclick="openPage('Guests', this, '#0288d1')" id="defaultOpen">Foo Orders  <span></span></li></div>
+                <li class="tablink tab" onclick="openPage('Serving', this, '#0288d1')">Foo Taps</li>
+                <li class="tablink tab" onclick="openPage('Menu', this, '#0288d1')">Foo Menu</li>
+            </ul>
+        </div>
+
+    </nav>
+    <main>
+        <div id="Guests" class="tabcontent">
+            <div class="guestGrid">
+                <div class="order-wrapper">
+                    <h4>New Orders</h4>
+                <section id="orderSection"> </section>
+                </div>
+                <div class="serving-wrapper">
+                <h4>Serving</h4>
+
+                    <section id="servedId"></section></div>
+            </div>
+        </div>
+        <div id="Serving" class="tabcontent">
+            <section id="tapList"> </section>
+            <section id="tapGraph">
+                <svg viewBox='0 0 500 100' id="tapSvg"></svg>
+            </section>
+        </div>
+        <div id="Menu" class="tabcontent">
+            <section id="menuSection"></section>
+        </div>
+    </main>
+
+
+
+    <template id="orderTemplate">
+        <article class="orderInQueue pending collection">
+
+            <h5 class="orderId">order #: <span></span></h5>
+            <h6 class="orders"><span></span></h6>
+        </article>
+    </template>
+
+    <template id="orderServed">
+            <article class="orderBeingServed collection valign-wrapper">
+
+                <img src="images/bartender.jpg" alt="" class="circle center">
+                <h6 class="bartenderName"></h6>
+
+                <h5 class="whoIsServed">Order #: <span></span></h5>
+                <h6 class="statusDetail"> </h6>
+            </article>
+    </template>
+
+        <template id="tapTemplate">
+        <article class="tapItem tapAvailab">
+            <h6 class="tapInUse">TAP AVAILABLE</h6>
+            <p class="beerName">BEER <br><span></span></p>
+            <p class="beerLevel">TAP LEVEL <br><span> </span>%</p>
+        </article>
+    </template>
+
+    <template id="menuTemplate">
+        <article class="menuArticle collection">
+            <h6 class="beerName">BEER: <span></span></h6>
+            <h6 class="beerType">TYPE: <span></span></h6>
+            <h6 class="beerAlcohol"> <span></span> % alc. </h6>
+
+            <button class="collapsible">Aroma</button>
+
+<div class="content collection">
+            <p class="aromaBeer"> <span></span></p>
+</div>
+
+         <button class="collapsible">Flavor</button>
+
+            <div class="content collection">
+                <p class="flavorBeer"> <span></span></p></div>
+
+                     <button class="collapsible">Mouthfeel</button>
+
+            <div class="content collection">
+                <p class="mouthfeelBeer"> <span></span></p></div>
+
+        </article>
+    </template>
+    <template id="notiTemplate">
+        <h6 class="notification"></h6>
+    </template>
+
+</body>
+<script src="http://petlatkea.dk/2018/front/foobar.js"></script>
+<script src="main.js"></script>
+<!--    Materialise CSS -->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+
+
+
+
+
+
+</html>

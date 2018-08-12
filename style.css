@@ -1,0 +1,184 @@
+* {
+    /*    border: red 1px solid;*/
+}
+
+body {
+    display: grid;
+    width: 100vw;
+    grid-template-rows: 1fr 7fr;
+}
+a.brand-logo {
+    left: 0.5em;
+    top:0.5em;
+
+}
+nav button {
+    display: inline;
+}
+nav.nav-extended {
+    height: 9em !important;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+ li.tablink.tab {
+    padding: 0em 10em 0em 10em ;
+}
+
+div.guestGrid {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 'beer bartender';
+}
+section#orderSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+div.order-wrapper{
+    grid-area: beer;
+        padding: 2em;
+
+}
+section#servedId{
+    grid-gap: 1em;
+}
+div.serving-wrapper {
+    grid-area: bartender;
+        padding: 2em;
+
+}
+section#tapList,
+section#tapGraph {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 0.8em;
+}
+article.orderBeingServed {
+    display: grid !important;
+    padding:2em;
+    grid-template-areas: 'img order'
+                        'name status'
+}
+img.circle{ grid-area: img;
+}
+div#Serving {
+    padding: 2em;
+}
+.whoIsServed {
+    grid-area:order;
+    font-family: 'Oswald', sans-serif;
+}
+.whoIsServed > span {
+    font-size: 1.8em;
+        color:#99C24D;
+
+}
+.bartenderName{grid-area: name;}
+.statusDetail{grid-area: status;}
+
+section#menuSection {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+}
+
+article.orderInQueue {
+    padding: 2em;
+}
+
+article.orderBeingServed {
+    /*        background-color: aquamarine;*/
+}
+article.tapItem {
+    text-align: center;
+    padding: 0.5em;
+}
+svg {
+            background-color: #E4572E;
+}
+
+.inUse {
+    opacity: 0.2;
+}
+.tapInUse {
+    background-color: #99C24D;
+    color: white;
+    line-height: 2em;
+    text-align: center;
+}
+
+.beingServed {
+    opacity: 0.2;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.menuArticle {
+   padding: 3em;
+}
+.beerName > span {
+    font-size: 150%;
+    line-height: 1.5em;
+    font-family: 'Oswald', sans-serif;
+}
+.beerLevel > span {
+    font-size: 3em;
+        line-height: 1.8em;
+    font-family: 'Oswald', sans-serif;
+
+}
+.orderId{
+        font-family: 'Oswald', sans-serif;
+}
+h4{
+        font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.1em;
+}
+.orderId > span {
+     font-size: 1.8em;
+    color: #E4572E;
+}
+li.tablink.tab > span {
+     height: 2em;
+  width: 2em;
+    vertical-align: middle;
+  background-color: #E4572E;
+  border-radius: 50%;
+  display: inline-block;
+    line-height: 2em;
+}
+
+
+/*collapsible*/
+
+.collapsible {
+    background-color: #F18F01;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, button:focus, .collapsible:hover {
+    background-color: #E4572E !important;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+
+
+
+
